@@ -1,43 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Expenses chart component</title>
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png" />
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
-</head>
-<body>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&display=swap" rel="stylesheet" />
 
-  My balance
-  $921.48
+    <title>Frontend Mentor | Expenses chart component</title>
 
-  Spending - Last 7 days
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <link rel="stylesheet" href="./styles/normalize.css" />
+    <link rel="stylesheet" href="./styles/style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <header class="header">
+        <div class="header_balance">
+          <p>My balance</p>
+          <p class="header_balance_myBalance">$921.48</p>
+        </div>
+        <div class="header_logo">
+          <img src="./images/logo.svg" alt="logo" />
+        </div>
+      </header>
+      <main class="main">
+        <h2 class="main_title">Spendig - Last 7 days</h2>
+        <section class="main_charts"></section>
+        <hr />
+        <section class="main_resume">
+          <div class="main_resume_totalMonth">
+            <p class="main_resume_subtitle">Total this month</p>
+            <p class="main_resume_totalMonth_number">$478.33</p>
+          </div>
+          <div class="main_resume_average">
+            <p class="main_resume_average_percentage">+2.4%</p>
+            <p class="main_resume_subtitle">from last month</p>
+          </div>
+        </section>
+      </main>
+    </div>
 
-  mon
-  tue
-  wed
-  thu
-  fri
-  sat
-  sun
-
-  Total this month
-  $478.33
-
-  +2.4%
-  from last month
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
-</body>
+    <footer class="attribution">Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. Coded by <a href="#">Martín</a>.</footer>
+  </body>
 </html>
