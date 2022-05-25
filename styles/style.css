@@ -37,6 +37,7 @@ p {
   justify-content: space-between;
   align-items: center;
   width: 85%;
+  max-width: 600px;
   padding: 1rem;
   border-radius: 10px;
 }
@@ -55,6 +56,7 @@ p {
 /* Main */
 .main {
   width: 85%;
+  max-width: 600px;
   padding: 1rem;
   background-color: var(--Very-pale-orange);
   border-radius: 10px;
@@ -63,6 +65,34 @@ p {
 
 .main hr {
   border-top: 1px solid var(--Cream);
+}
+
+.main_charts {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-end;
+  gap: 0.5rem;
+}
+
+.main_charts_barContent {
+  width: 14%;
+}
+
+.main_charts_bar {
+  background-color: var(--Soft-red);
+  border-radius: 5px;
+}
+.main_charts_barHigher {
+  background-color: var(--Cyan);
+}
+
+.main_charts_bar:hover {
+  background-color: hsl(10, 79%, 75%);
+}
+
+.main_charts_day {
+  text-align: center;
+  color: var(--Medium-brown);
 }
 
 .main_resume {
