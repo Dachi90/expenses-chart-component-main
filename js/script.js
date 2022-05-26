@@ -5,8 +5,13 @@ const $ChartContainer = document.querySelector(".main_charts");
 let amounts = [];
 
 window.addEventListener("DOMContentLoaded", () => {
+  createCharts();
+});
+
+const createCharts = () => {
   data.forEach((el) => {
     let $BarContainer = document.createElement("div");
+    let $Amount = document.createElement("div");
     let $Bar = document.createElement("div");
     let $Day = document.createElement("div");
 
@@ -14,24 +19,32 @@ window.addEventListener("DOMContentLoaded", () => {
 
     $BarContainer.classList.add("main_charts_barContent");
 
+    $Amount.textContent = `$${el.amount}`;
+    $Amount.classList.add("main_charts_amount");
+
     $Bar.style.height = `${el.amount * 2.5}px`;
     $Bar.classList.add("main_charts_bar");
 
     $Day.textContent = `${el.day}`;
     $Day.classList.add("main_charts_day");
 
+    $BarContainer.appendChild($Amount);
     $BarContainer.appendChild($Bar);
     $BarContainer.appendChild($Day);
     $ChartContainer.appendChild($BarContainer);
   });
-});
-
-const barHigher = () => {
-  console.log(amounts.sort().pop());
-  console.log($Bar);
-  if ($Bar.style.height == amounts.sort().pop()) {
-    $Bar.classList.add(".main_charts_barHigher");
-  }
+  barHigher();
 };
 
-barHigher();
+const barHigher = () => {
+  let allBars = document.getElementsByClassName("main_charts_bar");
+  let maxHeight = amounts.sort().slice(-1) * 2.5 + "px";
+
+  for (let i = 0; i < allBars.length; i++) {
+    console.log(allBars[i].style.height);
+    if (allBars[i].style.height == maxHeight) {
+      console.log("hola");
+      allBars[i].classList.add("main_charts_barHigher");
+    }
+  }
+};

@@ -16,6 +16,10 @@ p {
   margin: 0;
 }
 
+.display_block {
+  display: block;
+}
+
 /* Container */
 .container {
   height: 100vh;
@@ -76,6 +80,16 @@ p {
 
 .main_charts_barContent {
   width: 14%;
+}
+
+.main_charts_amount {
+  font-size: 0.8rem;
+  color: var(--Very-pale-orange);
+  background-color: var(--Dark-brown);
+  border-radius: 5px;
+  padding: 0.1rem;
+  margin-bottom: 0.5rem;
+  display: none;
 }
 
 .main_charts_bar {
