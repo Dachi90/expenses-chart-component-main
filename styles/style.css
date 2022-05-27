@@ -75,7 +75,6 @@ p {
   display: flex;
   justify-content: space-around;
   align-items: flex-end;
-  gap: 0.5rem;
 }
 
 .main_charts_barContent {
