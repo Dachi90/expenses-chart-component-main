@@ -22,7 +22,7 @@ const createCharts = () => {
     $Amount.textContent = `$${el.amount}`;
     $Amount.classList.add("main_charts_amount");
 
-    $Bar.style.height = `${el.amount * 2.5}px`;
+    $Bar.style.height = `${el.amount * 3.1}px`;
     $Bar.classList.add("main_charts_bar");
 
     $Day.textContent = `${el.day}`;
@@ -38,12 +38,10 @@ const createCharts = () => {
 
 const barHigher = () => {
   let allBars = document.getElementsByClassName("main_charts_bar");
-  let maxHeight = amounts.sort().slice(-1) * 2.5 + "px";
+  let maxHeight = amounts.sort().slice(-1) * 3.1 + "px";
 
   for (let i = 0; i < allBars.length; i++) {
-    console.log(allBars[i].style.height);
     if (allBars[i].style.height == maxHeight) {
-      console.log("hola");
       allBars[i].classList.add("main_charts_barHigher");
     }
   }
